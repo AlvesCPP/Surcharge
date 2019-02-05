@@ -121,6 +121,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cList.h" />
     <ClInclude Include="cVector2.h" />
     <ClInclude Include="cVector3.h" />
   </ItemGroup>

@@ -1,14 +1,21 @@
 #include <iostream>
 #include <Windows.h>
+#include "cList.h"
 #include "cVector2.h"
 #include "cVector3.h"
 
 int main() {
 	cVector2 vectorA(10, 10), vectorB(0, 0);
 	cVector3 vectorC(1, 1, 1);
+	cVector2 vectArray[] = { vectorA, vectorB, cVector2(50,50) };
+
+	cList<cVector2> vectList(vectArray, 3);
 
 	SetConsoleOutputCP(CP_UTF7);//Assignation de l'encodage de la console (Affichage des accents)
-
+	
+	std::cout << "Affichage via la liste de vecteurs : " << vectList[0] << std::endl;
+	std::cout << vectList << std::endl;
+	
 	//Utilisation de l'opérateur d'extraction surchargé d'un cVector2
 	std::cout << "Vecteur 2D A : " << vectorA << std::endl;
 
